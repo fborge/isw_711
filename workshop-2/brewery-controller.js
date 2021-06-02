@@ -5,7 +5,7 @@ let viewBreweryData = async() => {
     let breweries = await breweryList();
     tbody.innerHTML = '';
 
-    for (let i = 0; i < 10; i++) {    
+    for (let i = 0; i < breweries.length; i++) {    
         let row = tbody.insertRow();
         row.insertCell().innerHTML = breweries[i]['id'];
         row.insertCell().innerHTML = breweries[i]['name'];

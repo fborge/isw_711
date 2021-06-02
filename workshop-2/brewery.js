@@ -4,7 +4,7 @@ let breweryList = async() => {
 
     await axios({
             method: 'get',
-            url: 'https://api.openbrewerydb.org/breweries',
+            url: 'https://api.openbrewerydb.org/breweries?per_page=10',
             responseType: 'json'
         }).then(function(res) {
            breweries = res.data;
