@@ -1,0 +1,25 @@
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Code</th>
+            <th scope="col">Career</th>
+            <th scope="col">Credit</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let course of courses; let i =index">
+            <td>{{i+1}}</td>
+            <td>{{course.name}}</td>
+            <td>{{course.code}}</td>
+            <td>{{course.career}}</td>
+            <td>{{course.credit}}</td>
+            <td>
+                <button class="btn btn-primary btn-sm mx-auto me-md-2">Edit</button>
+                <button class="btn btn-danger btn-sm mx-auto">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
