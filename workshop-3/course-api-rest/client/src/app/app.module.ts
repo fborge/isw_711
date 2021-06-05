@@ -10,6 +10,8 @@ import { AddCourseComponent } from './course/add-course/add-course.component';
 
 import {HttpClientModule} from '@angular/common/http';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 const appRoutes:Routes =[
   {
     path: '', component:CourseComponent
@@ -30,6 +32,8 @@ const appRoutes:Routes =[
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

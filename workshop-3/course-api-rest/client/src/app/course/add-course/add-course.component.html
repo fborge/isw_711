@@ -1,1 +1,43 @@
-<p>add-course works!</p>
+<div class="container">
+    <form (ngSubmit)="insertData()" [formGroup]="form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" formControlName="name" [ngClass]="{'is-invalid':submitted && f.name.errors}" class="form-control" placeholder="Enter name">
+
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errors.required">Name is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="code">Code</label>
+            <input type="text" formControlName="code" [ngClass]="{'is-invalid':submitted && f.code.errors}" class="form-control" placeholder="Enter code">
+            
+            <div *ngIf="submitted && f.code.errors" class="invalid-feedback">
+                <div *ngIf="f.code.errors.required">Code is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="career">Career</label>
+            <input type="text" formControlName="career" [ngClass]="{'is-invalid':submitted && f.career.errors}" class="form-control" placeholder="Enter career">
+            
+            <div *ngIf="submitted && f.career.errors" class="invalid-feedback">
+                <div *ngIf="f.career.errors.required">Career is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="credit">Credit</label>
+            <input type="text" formControlName="credit" [ngClass]="{'is-invalid':submitted && f.credit.errors}" class="form-control" placeholder="Enter credit">
+            
+            <div *ngIf="submitted && f.credit.errors" class="invalid-feedback">
+                <div *ngIf="f.credit.errors.required">Credit is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-dark btn-sm mt-4">Save</button>
+        </div>
+    </form>
+</div>
