@@ -15,4 +15,11 @@ export class CourseService {
     return this.httpClient.post('http://localhost:3000/api/courses', data);
   }
 
+  getDataById(id:any){
+    return this.httpClient.get('http://localhost:3000/api/courses?id='+id);
+  }
+
+  updateData(id:any, data:any){
+    return this.httpClient.patch('http://localhost:3000/api/courses?id='+id, data);
+  }
 }
