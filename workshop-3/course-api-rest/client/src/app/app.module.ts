@@ -13,6 +13,7 @@ import { AddCourseComponent } from './course/add-course/add-course.component';
 import {HttpClientModule} from '@angular/common/http';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { EditCourseComponent } from './edit-course/edit-course.component';
 
 const appRoutes:Routes =[
   {
@@ -20,6 +21,9 @@ const appRoutes:Routes =[
   },
   {
     path: 'add-course', component:AddCourseComponent
+  },
+  {
+    path: 'edit/:id', component:EditCourseComponent
   }
 ]
 
@@ -29,7 +33,8 @@ const appRoutes:Routes =[
     AppComponent,
     NavbarComponent,
     CourseComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    EditCourseComponent
   ],
   imports: [
     BrowserModule,
