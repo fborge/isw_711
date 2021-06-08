@@ -22,4 +22,8 @@ export class CourseService {
   updateData(id:any, data:any){
     return this.httpClient.patch('http://localhost:3000/api/courses?id='+id, data);
   }
+
+  deleteData(id:any){
+    return this.httpClient.delete('http://localhost:3000/api/courses?id='+id);
+  }
 }
