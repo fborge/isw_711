@@ -1,0 +1,24 @@
+{
+  "name": "graphql-api",
+  "version": "1.0.0",
+  "description": "My first Graphql API with Nodejs and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Francisco B",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.10.2",
+    "graphql": "^15.3.0",
+    "graphql-tools": "^6.0.12",
+    "mongoose": "^5.12.14"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
