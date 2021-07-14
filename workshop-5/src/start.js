@@ -21,7 +21,6 @@ const MONGO_URL = 'mongodb://127.0.0.1:27017/blog'
 export const start = async () => {
   try {
     
-
     const db = await MongoClient.connect(MONGO_URL)
 
     const Posts = db.collection('posts')
